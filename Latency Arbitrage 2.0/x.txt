@@ -1,0 +1,12 @@
+{'time TickMill': Timestamp('2022-06-20 18:11:34'), 'bidopen': 13240.1, 'askopen': 13240.6, 'last': 0.0, 'volume': 0, 'time_msc': '2022-06-20 18:11:34.054000', 'flags': 6, 'volume_real': 0.0}
+{'time ICM': Timestamp('2022-06-20 18:11:15'), 'bidopen': 13239.1, 'askopen': 13239.6, 'last': 0.0, 'volume': 0, 'time_msc': '2022-06-20 18:11:15.952000', 'flags': 6, 'volume_real': 0.0}
+
+Buy     2022-06-20 18:11:34.054000      2022-06-20 18:11:15.952000      13240.1 13239.6
+OrderSendResult(retcode=10009, deal=166691603, order=234986065, volume=0.1, price=13240.6, bid=13240.1, ask=13240.6, comment='Request executed', request_id=291, retcode_external=0, request=TradeRequest(action=1, magic=234000, order=0, symbol='DE40', volume=0.1, price=13239.6, stoplimit=0.0, sl=13238.6, tp=13240.1, deviation=0, type=0, type_filling=1, type_time=0, expiration=0, comment='python script open', position=0, position_by=0))
+
+
+{'time TickMill': Timestamp('2022-06-20 18:11:34'), 'bidopen': 13240.1, 'askopen': 13240.6, 'last': 0.0, 'volume': 0, 'time_msc': '2022-06-20 18:11:34.054000', 'flags': 6, 'volume_real': 0.0}
+{'time ICM': Timestamp('2022-06-20 18:11:15'), 'bidopen': 13239.1, 'askopen': 13239.6, 'last': 0.0, 'volume': 0, 'time_msc': '2022-06-20 18:11:15.952000', 'flags': 6, 'volume_real': 0.0}     
+Buy     2022-06-20 18:11:34.054000      2022-06-20 18:11:15.952000      13240.1 13239.6
+OrderSendResult(retcode=10009, deal=166691604, order=234986067, volume=0.1, price=13238.6, bid=13238.1, ask=13238.6, comment='Request executed', request_id=292, retcode_external=0, request=TradeRequest(action=1, magic=234000, order=0, symbol='DE40', volume=0.1, price=13239.6, stoplimit=0.0, sl=13238.6, tp=13240.1, deviation=0, type=0, type_filling=1, type_time=0, expiration=0, comment='python script open', position=0, position_by=0))
+
