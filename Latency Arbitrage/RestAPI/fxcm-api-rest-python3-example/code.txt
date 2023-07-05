@@ -1,0 +1,63 @@
+if 1==0:
+        try:
+            print("Logged in, now getting Account details")
+            
+
+            fxcmTrader.subscribe(items=str('NAS100'), handler=fxcmTrader.on_price_update)
+            
+
+            '''print("Opening a trade now NAS100 1 lots on %s" % account_id)
+            x=0
+            while x <5:
+                bef =datetime.datetime.now()
+                response = fxcmTrader.open_trade(account_id, "NAS100", True, 1)
+                after  =datetime.datetime.now()
+                print(after - bef)
+                x+=1
+            
+            print(response)'''
+            '''if 1==0:# response['status'] is True:
+                orderId = response['data']['orderId']
+                tradeId = fxcmTrader.get_tradeId(orderId)
+                print("TradeID: ", tradeId)
+                print("Open trade response: ", response)
+                positions = fxcmTrader.get_model("OpenPosition")        
+                print("Positions: ", positions)
+                response = fxcmTrader.close_all_for_symbol("USD/JPY")
+                print("Close All result:\n\n", response['status'], response, "\n\n")
+                positions = fxcmTrader.get_model("OpenPosition")
+                print("Positions: ", positions)
+
+            
+
+
+
+            fxcmTrader.logout()'''
+        except Exception as e:
+            print(str(e))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{'Time': Timestamp('2022-04-27 14:17:34.638000'), 'Bid': 13024.04, 'Ask': 13025.34}
+{'Time': Timestamp('2022-04-27 14:17:35.570000'), 'Bid': 13023.96, 'Ask': 13025.26}
+{'Time': Timestamp('2022-04-27 14:17:36.115000'), 'Bid': 13023.46, 'Ask': 13024.76}
+
+{'time': Timestamp('2022-04-27 17:18:30'), 'bidopen': 12968.82, 'askopen': 12969.97, 'last': 12968.82, 'volume': 35, 'time_msc': Timestamp('2022-04-27 17:18:30.736000'), 'flags': 6, 'volume_real': 35.0}
+{'time': Timestamp('2022-04-27 17:18:30'), 'bidopen': 12968.82, 'askopen': 12969.97, 'last': 12968.82, 'volume': 35, 'time_msc': Timestamp('2022-04-27 17:18:30.736000'), 'flags': 6, 'volume_real': 35.0}
+{'time': Timestamp('2022-04-27 17:18:30'), 'bidopen': 12968.82, 'askopen': 12969.97, 'last': 12968.82, 'volume': 35, 'time_msc': Timestamp('2022-04-27 17:18:30.736000'), 'flags': 6, 'volume_real': 35.0}
+{'time': Timestamp('2022-04-27 17:18:30'), 'bidopen': 12968.82, 'askopen': 12969.97, 'last': 12968.82, 'volume': 35, 'time_msc': Timestamp('2022-04-27 17:18:30.736000'), 'flags': 6, 'volume_real': 35.0}
+{'time': Timestamp('2022-04-27 17:18:30'), 'bidopen': 12968.82, 'askopen': 12969.97, 'last': 12968.82, 'volume': 35, 'time_msc': Timestamp('2022-04-27 17:18:30.736000'), 'flags': 6, 'volume_real': 35.0}
+{'time': Timestamp('2022-04-27 17:18:30'), 'bidopen': 12968.82, 'askopen': 12969.97, 'last': 12968.82, 'volume': 35, 'time_msc': Timestamp('2022-04-27 17:18:30.736000'), 'flags': 6, 'volume_real': 35.0}

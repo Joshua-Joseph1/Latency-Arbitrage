@@ -1,0 +1,28 @@
+        #BUY CONDITIONS
+        if self.data["askopen"].iloc[-1] > self.data["EMA"].iloc[-1] and self.position == 0:#and self.check_history(buy=True):
+            self.position =1
+            
+            open_trade = self.api.open_trade(account_id=self.api.get_account_ids()[0], symbol=self.instrument, is_buy=True, amount=self.units,rate=0,at_market=0, time_in_force="GTC", order_type="AtMarket",  stop=self.calculate_stop_loss(), trailing_step=None, limit=self.calculate_take_profit(),is_in_pips=False)
+            self.report_trade(open_trade, "GOING LONG")
+        
+        #SELL CONDITIONS
+        if self.data["askopen"].iloc[-1] < self.data["EMA"].iloc[-1] and self.position == 0 :#and self.check_history(buy=False):
+
+            self.position =-1
+
+            open_trade = self.api.open_trade(account_id=self.api.get_account_ids()[0], symbol=self.instrument, is_buy=False, amount=self.units,rate=0,at_market=0, time_in_force="GTC", order_type="AtMarket",  stop=self.calculate_stop_loss(), trailing_step=None, limit=self.calculate_take_profit(),is_in_pips=False)
+            self.report_trade(open_trade, "GOING SHORT")
+
+
+
+
+
+2022-03-22 18:27:12.110  14612.45  14613.75  14690.67  14298.21
+2022-03-22 18:27:12.441  14612.64  14613.94  14690.67  14298.21
+2022-03-22 18:27:13.053  14613.08  14614.38  14690.67  14298.21
+                 time   bidopen   askopen      last  volume                time_msc  flags  volume_real
+2022-03-22 20:27:03  14614.62  14615.77  14614.62      35 2022-03-22 20:27:03.038      6         
+2022-03-22 20:27:14  14613.37  14614.52  14613.37      35 2022-03-22 20:27:14.128      6         
+                              Bid       Ask      High       Low
+2022-03-22 18:27:03.046  14613.14  14614.44  14690.67  14298.21
+2022-03-22 18:27:03.116  14613.10  14614.40  14690.67  14298.21

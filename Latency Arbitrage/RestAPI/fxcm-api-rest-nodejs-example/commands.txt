@@ -1,0 +1,55 @@
+// close the program
+exit
+
+// request a list of all available symbols
+send { "method":"GET", "resource":"/trading/get_instruments" }
+
+// request a snapshot of trading tables
+send { "method":"GET", "resource":"/trading/get_model", "params": { "models":["Offer"] } }
+send { "method":"GET", "resource":"/trading/get_model", "params": { "models":["Account"] } }
+send { "method":"GET", "resource":"/trading/get_model", "params": { "models":["Offer","OpenPosition","ClosedPosition","Order","Account", "Summary","LeverageProfile","Properties"] } }
+
+// update symbols subscribed to in Offers tables
+send { "method":"POST", "resource":"/trading/update_subscriptions", "params": { "symbol":"EUR/USD", "visible":true } }
+send { "method":"POST", "resource":"/trading/update_subscriptions", "params": { "symbol":"EUR/USD", "visible":false } }
+
+
+// open a position with market order
+send { "method":"POST", "resource":"/trading/open_trade", "params": { "account_id":"1027808", "symbol":"EUR/USD", "is_buy":true, "amount":1, "time_in_force":"FOK" } }
+send { "method":"POST", "resource":"/trading/open_trade", "params": { "account_id":"1027808", "symbol":"EUR/USD", "is_buy":true, "amount":10, "time_in_force":"FOK" } }
+
+// close a position with market order
+send { "method":"POST", "resource":"/trading/close_trade", "params": { "amount":1, "time_in_force":"GTC", "trade_id":"123778283" } }
+
+// create an entry order
+send { "method":"POST", "resource":"/trading/create_entry_order", "params": { "account_id":"1027808", "symbol":"EUR/USD", "is_buy":true, "rate":1.22, "amount":10 } }
+
+// modify waiting order
+send { "method":"POST", "resource":"/trading/change_order", "params": { "order_id":"241163945", "rate":1.21, "amount":2 } }
+send { "method":"POST", "resource":"/trading/change_order", "params": { "order_id":"241163945", "rate":1.22, "amount":1 } }
+
+// delete waiting order
+send { "method":"POST", "resource":"/trading/delete_order", "params": { "order_id":"241163945" } }
+
+// request historical price data
+send { "method":"GET", "resource":"/candles/1/m1", "params": { "num":10 } }
+send { "method":"GET", "resource":"/candles/1/m1", "params": { "num":1, "from":1519084679, "to":1519430400 } }
+send { "method":"GET", "resource":"/candles/1/d1", "params": { "num":1, "from":1515024000, "to":1516752000 } }
+send { "method":"GET", "resource":"/candles/1/d1", "params": { "num":1, "from":1515456000, "to":1517529600 } }
+
+--- Live Prices module ---
+load {"filename":"liveprices.js"}
+
+price_subscribe {"pairs":"EUR/USD"}
+price_subscribe {"pairs":["GBP/USD","USD/JPY"]}
+price_unsubscribe {"pairs":["EUR/USD","GBP/USD","USD/JPY"]}
+
+--- Trading Tables module ---
+load {"filename":"tradingtables.js"}
+
+table_subscribe {"tables":"Offer"}
+table_subscribe {"tables":["Offer","Order"]}
+table_unsubscribe {"tables":["Offer","Order"]}
+
+
+send { "method":"POST", "resource":"/trading/subscribe", "params": { "models":"Order" } }

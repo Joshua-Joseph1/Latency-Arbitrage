@@ -1,0 +1,4 @@
+connection.HTTPSConnection object at 0x000002A09AA68C70>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond'))
+0:00:21.140188
+{'status': False, 'data': "HTTPSConnectionPool(host='api-demo.fxcm.com', port=443): Max retries exceeded with url: /trading/open_trade (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002A09AA68C70>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond'))"}   
+13289.24 13290.27

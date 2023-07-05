@@ -1,0 +1,3 @@
+python-dateutil
+python-socketio==5.0.4
+python-engineio==4.3.1

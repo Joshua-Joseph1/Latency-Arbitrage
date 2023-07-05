@@ -1,0 +1,8 @@
+{'time': Timestamp('2022-04-27 18:18:15'), 'bidopen': 13085.32, 'askopen': 13086.47, 'last': 13085.32, 'volume': 35, 'time_msc': Timestamp('2022-04-27 18:18:15.643000'), 'flags': 24, 'volume_real': 35.0}
+{'Time': Timestamp('2022-04-27 15:18:03.197000'), 'Bid': 13058.39, 'Ask': 13059.69}
+{'time': Timestamp('2022-04-27 18:18:15'), 'bidopen': 13085.07, 'askopen': 13086.22, 'last': 13085.07, 'volume': 35, 'time_msc': Timestamp('2022-04-27 18:18:15.797000'), 'flags': 24, 'volume_real': 35.0}
+{'Time': Timestamp('2022-04-27 15:18:03.197000'), 'Bid': 13058.39, 'Ask': 13059.69}
+{'time': Timestamp('2022-04-27 18:18:15'), 'bidopen': 13085.57, 'askopen': 13086.72, 'last': 13085.57, 'volume': 35, 'time_msc': Timestamp('2022-04-27 18:18:15.974000'), 'flags': 6, 'volume_real': 35.0}
+{'Time': Timestamp('2022-04-27 15:18:03.197000'), 'Bid': 13058.39, 'Ask': 13059.69}
+{'time': Timestamp('2022-04-27 18:18:16'), 'bidopen': 13085.57, 'askopen': 13086.72, 'last': 13085.57, 'volume': 35, 'time_msc': Timestamp('2022-04-27 18:18:16.218000'), 'flags': 24, 'volume_real': 35.0}
+{'Time': Timestamp('2022-04-27 15:18:03.197000'), 'Bid': 13058.39, 'Ask': 13059.69}
